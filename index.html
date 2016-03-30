@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <title>Teste de Mercado</title>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+   <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+   <script src="scripts/main.js"></script>
+</head>
+<body>
+
+<h1>Teste do Mercado</h1>
+
+
+<form name="dadosmerc" method="post" action="">
+   <fieldset>
+<!-- Formulario com os campos solicitados no teste -->
+
+      <label for="cod"> Código Mercadoria: <input type="text" name="cod" id="cod" size="4"/></label>
+      <label for="tipo"> Tipo: <input type="text" name="tipo" id="tipo" size="25"/></label>
+      <label for="nome"> Nome: <input type="text" name="nome" id="nome" size="25"/></label>
+      <label for="quant"> Quantidade: <input type="text" name="quant" id="quant" size="4"/></label>
+      <label for="preco"> Preço: <input type="text" name="preco" id="preco" size="7"/></label>
+      <label for="oper">Selecione a operação:
+      	<select name="oper" id="oper">
+      	   <option value="compra">Compra</option>
+      	   <option value="venda">Venda</option>
+      	</select>
+      </label>
+
+      </br>
+<!-- botao de envio dos dados recebidos -->
+      <label for="botao"> <input type="button" value="Selecionar" class="botao" onClick="selecionar(document.dadosmerc1.oper.value)"/></label>
+
+   </fieldset>
+</form>
+
+<form name="dadosmerc1" method="post" action="">
+   <fieldset>
+<!-- formulario de exibicao dos campos solicitados, mostrando o total da operacao envolvendo quantidade e preco -->
+
+      <label for="cod"> Código Mercadoria: <input type="text" name="cod" id="cod" size="4" disabled="disabled"/></label>
+      <label for="tipo"> Tipo: <input type="text" name="tipo" id="tipo" size="25" disabled="disabled"/></label>
+      <label for="nome"> Nome: <input type="text" name="nome" id="nome" size="25" disabled="disabled"/></label>
+      <label for="quant"> Quantidade: <input type="text" name="quant" id="quant" size="4" disabled="disabled"/></label>
+      <label for="preco"> Preço: <input type="text" name="preco" id="preco" size="7" disabled="disabled"/></label>
+      <label for="oper">Operação: <input type="text" name="oper" id="oper" size="7" disabled="disabled" /></label>
+      <label for="jun">Total: <input type="text" name="jun" id="jun" disabled="disabled" /> </label>
+      
+   </fieldset>
+</form>
+
+</body>
+</html>
